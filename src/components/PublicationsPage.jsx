@@ -295,17 +295,6 @@ function PublicationsPage() {
                       <span>, pp. {paper.pages}</span>
                     )}
                   </div>
-
-                  <div className="flex items-center space-x-4">
-                    <Button variant="outline" size="sm" className="flex items-center space-x-1">
-                      <FileText size={14} />
-                      <span>PDF</span>
-                    </Button>
-                    <Button variant="ghost" size="sm" className="flex items-center space-x-1">
-                      <ExternalLink size={14} />
-                      <span>DOI</span>
-                    </Button>
-                  </div>
                 </div>
               ))}
             </div>

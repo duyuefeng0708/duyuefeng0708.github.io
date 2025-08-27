@@ -1,7 +1,10 @@
 import { ArrowRight, MapPin, GraduationCap, Brain, Shield, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
+import { useNavigate } from 'react-router-dom'
 
 function HomePage() {
+  const navigate = useNavigate()
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
@@ -36,11 +39,18 @@ function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="flex items-center space-x-2">
+              <Button
+                className="flex items-center space-x-2"
+                onClick={() => navigate('/publications')}
+              >
                 <span>View Publications</span>
                 <ArrowRight size={16} />
               </Button>
-              <Button variant="outline" className="flex items-center space-x-2">
+              <Button
+                variant="outline"
+                className="flex items-center space-x-2"
+                onClick={() => navigate('/teaching')}
+              >
                 <span>Teaching Experience</span>
                 <BookOpen size={16} />
               </Button>
